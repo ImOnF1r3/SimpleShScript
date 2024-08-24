@@ -30,15 +30,15 @@ while true; do
     echo "To-Do List:"
     view_tasks
     echo ""
-    echo "Options: [0] Add task [2] Delete task [99] Exit"
+    echo "Options: [0] Add task [1] Delete task [99] Exit"
     read -p "Choose an option: " choice
 
     case $choice in
-        1)
+        0)
             read -p "Enter the task: " task
             add_task "$task"
             ;;
-        2)
+        1)
             read -p "Enter task number to delete: " task_num
             delete_task $task_num
             ;;
